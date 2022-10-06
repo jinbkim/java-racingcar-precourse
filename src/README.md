@@ -1,5 +1,5 @@
 ## 기능 요구사항
-- [ ] 경주할 자동차 이름을 쉼표로 구분하여 정상적인 입력값으로 입력받기
+- [x] 경주할 자동차 이름을 쉼표로 구분하여 정상적인 입력값으로 입력받기
 - [ ] 경주할 자동차 이름을 비정상적인 입력값으로 입력받기
   - [ ] 6자 이상의 이름을 입력으로 받았을 경우
   - [ ] 이름이 공백일 경우
@@ -31,6 +31,7 @@
 - [ ] setPosition(int position) 메소드를 추가 x
 
 ## 과제 진행 요구사항
+
 - [ ] https://github.com/woowacourse/java-racingcar-precourse 에서 포크하고 클론받기
 - [ ] 구현할 기능목록 작성하기
 - [ ] 커밋 단위는 기능목록 단위
@@ -38,3 +39,7 @@
 - [ ] https:/github.com/woowacourse/woowacourse-docs/tree/master/precourse 를 참고하여 과제 제출하기
 
 ## 학습한 내용
+
+### String 메소드
+
+- trim() : 문자열 앞 뒤 공백 제거
