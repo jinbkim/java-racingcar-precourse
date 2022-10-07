@@ -8,7 +8,7 @@
 - [x] 경주 시도 횟수 비정상적인 입력값으로 입력받기
   - [x] 숫자가 아닌 경우
   - [x] 자연수가 아닌 경우
-- [ ] 0에서 9사이의 무작위 값을 이용해 4 이상일 경우, 말 전진하기
+- [x] 0에서 9사이의 무작위 값을 이용해 4 이상일 경우, 말 전진하기
 - [ ] 게임 완료후, 우승자 출력하기
   - [ ] 우숭자가 여러 명일 경우 쉼표(,)로 구분하여 출력하기
 
@@ -22,9 +22,9 @@
 - [ ] 함수의 길이가 15라인이 넘지 않도록 구현하기
 - [ ] else 사용 x
 - [ ] switch/case 사용 x
-- [ ] camp.nextstep.edu.missionutils 에서 제공하는 Randoms, Console API 사용하기
-  - [ ] Randoms.pickNumberInRange()로 랜덤변수 생성하기
-  - [ ] Console.readLine()로 입력 받기
+- [x] camp.nextstep.edu.missionutils 에서 제공하는 Randoms, Console API 사용하기
+  - [x] Randoms.pickNumberInRange()로 랜덤변수 생성하기
+  - [x] Console.readLine()로 입력 받기
 
 ## 프로그래밍 요구사항 - Car 객체
 - [ ] Car 기본 생성자 추가 x

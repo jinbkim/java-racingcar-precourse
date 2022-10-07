@@ -16,11 +16,17 @@ public class CarsModel {
             .forEach(carName -> cars.add(new Car(carName)));
     }
 
+    public void race() {
+        cars.forEach(c -> c.moveOneSpace());
+    }
+
 
     // test
     @Override
     public String toString() {
-        cars.forEach(c -> System.out.println(c.getName()));
+        cars.forEach(c -> {
+            System.out.println(c.getName() + ", " + c.getPosition());
+        });
         return "";
     }
 }

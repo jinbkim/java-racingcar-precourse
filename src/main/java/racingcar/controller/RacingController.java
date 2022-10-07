@@ -14,11 +14,13 @@ public class RacingController {
 
     public void run() {
         List<String> carNameList = inputView.requestRacingCar();
-        int tryNumber = inputView.requestTryNumber();
+        int raceTryNumber = inputView.requestRaceTryNumber();
 
         carsModel.setCars(carNameList);
+        for (int i = 0; i < raceTryNumber; i++) {
+            carsModel.race();
+        }
 
         carsModel.toString();
-        System.out.println(tryNumber);
     }
 }

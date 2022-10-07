@@ -36,11 +36,11 @@ public class InputValidator {
         return true;
     }
 
-    public void isValidateTryNumber(String tryNumber) {
-        if (!Pattern.matches(NUMBER_REGEX, tryNumber)) {
+    public void isValidateRaceTryNumber(String raceTryNumber) {
+        if (!Pattern.matches(NUMBER_REGEX, raceTryNumber)) {
             throw new IllegalArgumentException(OutputView.ONLY_NUMBER);
         }
-        if (Integer.parseInt(tryNumber) == 0) {
+        if (Integer.parseInt(raceTryNumber) == 0) {
             throw new IllegalArgumentException(OutputView.NONE_ZERO);
         }
     }

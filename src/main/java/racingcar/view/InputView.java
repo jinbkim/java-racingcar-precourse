@@ -26,14 +26,14 @@ public class InputView {
         return carNameList;
     }
 
-    public int requestTryNumber() {
+    public int requestRaceTryNumber() {
         String input = requestInput(OutputView.TRY_NUMBER).trim();
 
         try {
-            inputValidator.isValidateTryNumber(input);
+            inputValidator.isValidateRaceTryNumber(input);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
-            return requestTryNumber();
+            return requestRaceTryNumber();
         }
         return Integer.parseInt(input);
     }
