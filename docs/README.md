@@ -15,29 +15,29 @@
 
 ## 프로그래밍 요구사항
 - [x] java 8 버전 확인하기
-- [ ] ./gradlew clean test의 모든 테스트를 통과하기
-- [ ] 자바 컨벤션 지키기
-- [ ] 들여쓰기의 깊이는 최대 2까지 허용
-- [ ] 3항 연산자 쓰지 않기
-- [ ] 함수가 한가지 일만 하도록 최대한 작게 만들기
-- [ ] 함수의 길이가 15라인이 넘지 않도록 구현하기
-- [ ] else 사용 x
-- [ ] switch/case 사용 x
+- [x] ./gradlew clean test의 모든 테스트를 통과하기
+- [x] 자바 컨벤션 지키기
+- [x] 들여쓰기의 깊이는 최대 2까지 허용
+- [x] 3항 연산자 쓰지 않기
+- [x] 함수가 한가지 일만 하도록 최대한 작게 만들기
+- [x] 함수의 길이가 15라인이 넘지 않도록 구현하기
+- [x] else 사용 x
+- [x] switch/case 사용 x
 - [x] camp.nextstep.edu.missionutils 에서 제공하는 Randoms, Console API 사용하기
   - [x] Randoms.pickNumberInRange()로 랜덤변수 생성하기
   - [x] Console.readLine()로 입력 받기
 
 ## 프로그래밍 요구사항 - Car 객체
-- [ ] Car 기본 생성자 추가 x
-- [ ] name, position 변수의 접근 제어자인 private을 변경 x
-- [ ] setPosition(int position) 메소드를 추가 x
+- [x] Car 기본 생성자 추가 x
+- [x] name, position 변수의 접근 제어자인 private을 변경 x
+- [x] setPosition(int position) 메소드를 추가 x
 
 ## 과제 진행 요구사항
 
-- [ ] https://github.com/woowacourse/java-racingcar-precourse 에서 포크하고 클론받기
-- [ ] 구현할 기능목록 작성하기
-- [ ] 커밋 단위는 기능목록 단위
-- [ ] 의미있는 커밋 메시지 작성하기
+- [x] https://github.com/woowacourse/java-racingcar-precourse 에서 포크하고 클론받기
+- [x] 구현할 기능목록 작성하기
+- [x] 커밋 단위는 기능목록 단위
+- [x] 의미있는 커밋 메시지 작성하기
 - [ ] https:/github.com/woowacourse/woowacourse-docs/tree/master/precourse 를 참고하여 과제 제출하기
 
 ## 학습한 내용

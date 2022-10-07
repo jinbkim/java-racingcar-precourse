@@ -27,6 +27,7 @@ public class Car {
 
     public void moveOneSpace() {
         int randomNumber = Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
+
         if (randomNumber >= MOVEABLE_LEVEL) {
             position += 1;
         }
@@ -34,6 +35,7 @@ public class Car {
 
     public void printResult() {
         StringBuilder stringBuilder = new StringBuilder();
+
         stringBuilder.append(getName() + " : ");
         for (int i = 0; i < position; i++) {
             stringBuilder.append("-");
