@@ -14,11 +14,9 @@ public class InputView {
     }
 
     public List<String> requestRacingCar() {
-        System.out.println(OutputView.RACING_CAR_INPUT);
-        List<String> carNameList = Arrays.stream(Console.readLine()
-                .split(","))
-            .map(String::trim)
-            .collect(Collectors.toList());
+        String input = requestInput(OutputView.RACING_CAR_INPUT);
+        List<String> carNameList = parseInput(input);
+
         try {
             inputValidator.isValidateCarNameList(carNameList);
         } catch (IllegalArgumentException e) {
@@ -26,5 +24,28 @@ public class InputView {
             requestRacingCar();
         }
         return carNameList;
+    }
+
+    public int requestTryNumber() {
+        String input = requestInput(OutputView.TRY_NUMBER).trim();
+
+        try {
+            inputValidator.isValidateTryNumber(input);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return requestTryNumber();
+        }
+        return Integer.parseInt(input);
+    }
+
+    private String requestInput(String request) {
+        System.out.println(request);
+        return Console.readLine();
+    }
+
+    private List<String> parseInput(String input) {
+        return Arrays.stream(input.split(","))
+            .map(String::trim)
+            .collect(Collectors.toList());
     }
 }

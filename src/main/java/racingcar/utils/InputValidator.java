@@ -1,11 +1,14 @@
 package racingcar.utils;
 
 import java.util.List;
+import java.util.regex.Pattern;
 import racingcar.view.OutputView;
 
 public class InputValidator {
 
     private static final int CAR_NAME_MAX_SIZE = 5;
+
+    private static final String NUMBER_REGEX = "^[0-9]*$";
 
     public InputValidator() {
     }
@@ -15,27 +18,13 @@ public class InputValidator {
             throw new IllegalArgumentException(OutputView.DUPLICATE_CAR_NAME);
         }
         for (String carName : carNameList) {
-            if (isCarNameEmpty(carName)) {
+            if (carName.length() == 0) {
                 throw new IllegalArgumentException(OutputView.EMPTY_CAR_NAME);
             }
-            if (isCarNameOversize(carName)) {
+            if (carName.length() > CAR_NAME_MAX_SIZE) {
                 throw new IllegalArgumentException(OutputView.OVERSIZE_CAR_NAME);
             }
         }
-    }
-
-    private boolean isCarNameOversize(String carName) {
-        if (carName.length() > CAR_NAME_MAX_SIZE) {
-            return true;
-        }
-        return false;
-    }
-
-    private boolean isCarNameEmpty(String carName) {
-        if (carName.length() == 0) {
-            return true;
-        }
-        return false;
     }
 
     private boolean isCarNameDuplicate(List<String> carNameList) {
@@ -45,5 +34,14 @@ public class InputValidator {
             return false;
         }
         return true;
+    }
+
+    public void isValidateTryNumber(String tryNumber) {
+        if (!Pattern.matches(NUMBER_REGEX, tryNumber)) {
+            throw new IllegalArgumentException(OutputView.ONLY_NUMBER);
+        }
+        if (Integer.parseInt(tryNumber) == 0) {
+            throw new IllegalArgumentException(OutputView.NONE_ZERO);
+        }
     }
 }
