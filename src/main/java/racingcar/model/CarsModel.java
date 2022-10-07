@@ -1,9 +1,7 @@
 package racingcar.model;
 
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CarsModel {
 
@@ -12,11 +10,9 @@ public class CarsModel {
     public CarsModel() {
     }
 
-    public void setCars(String racingCarInput) {
-        cars = new LinkedList<>();
-        Arrays.stream(racingCarInput.split(","))
-            .map(String::trim)
-            .collect(Collectors.toList())
+    public void setCars(List<String> carNameList) {
+        cars = new ArrayList<>();
+        carNameList.stream()
             .forEach(carName -> cars.add(new Car(carName)));
     }
 
