@@ -27,7 +27,7 @@ public class Car {
 
     public void moveOneSpace() {
         int randomNumber = Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
-        if (randomNumber > MOVEABLE_LEVEL) {
+        if (randomNumber >= MOVEABLE_LEVEL) {
             position += 1;
         }
     }
@@ -39,11 +39,5 @@ public class Car {
             stringBuilder.append("-");
         }
         System.out.println(stringBuilder);
-    }
-
-    // test
-    @Override
-    public String toString() {
-        return "Car{" + "name='" + name + '\'' + ", position=" + position + '}';
     }
 }

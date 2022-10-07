@@ -57,14 +57,4 @@ public class CarsModel {
         }
         return maxPosition;
     }
-
-
-    // test
-    @Override
-    public String toString() {
-        cars.forEach(c -> {
-            System.out.println(c.getName() + ", " + c.getPosition());
-        });
-        return "";
-    }
 }
