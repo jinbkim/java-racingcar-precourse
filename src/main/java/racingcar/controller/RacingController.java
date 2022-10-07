@@ -22,7 +22,6 @@ public class RacingController {
         for (int i = 0; i < raceTryNumber; i++) {
             carsModel.race();
         }
-
-        carsModel.toString();
+        carsModel.printWinner();
     }
 }
