@@ -17,7 +17,11 @@ public class CarsModel {
     }
 
     public void race() {
-        cars.forEach(c -> c.moveOneSpace());
+        cars.forEach(c -> {
+            c.moveOneSpace();
+            c.printResult();
+        });
+        System.out.println();
     }
 
 

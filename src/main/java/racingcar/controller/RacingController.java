@@ -3,6 +3,7 @@ package racingcar.controller;
 import java.util.List;
 import racingcar.model.CarsModel;
 import racingcar.view.InputView;
+import racingcar.view.OutputView;
 
 public class RacingController {
 
@@ -17,6 +18,7 @@ public class RacingController {
         int raceTryNumber = inputView.requestRaceTryNumber();
 
         carsModel.setCars(carNameList);
+        System.out.println(OutputView.RESULT);
         for (int i = 0; i < raceTryNumber; i++) {
             carsModel.race();
         }
