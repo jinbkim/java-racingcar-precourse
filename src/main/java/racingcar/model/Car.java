@@ -1,6 +1,12 @@
 package racingcar.model;
 
+import camp.nextstep.edu.missionutils.Randoms;
+
 public class Car {
+
+    private static final int RANDOM_MIN_NUMBER = 0;
+    private static final int RANDOM_MAX_NUMBER = 9;
+    private static final int MOVEALBE_LEVEL = 4;
 
     private final String name;
     private int position = 0;
@@ -9,5 +15,10 @@ public class Car {
         this.name = name;
     }
 
-    // 추가 기능 구현
+    public void move() {
+        int randomNumber = Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
+        if (randomNumber >= MOVEALBE_LEVEL) {
+            position += 1;
+        }
+    }
 }

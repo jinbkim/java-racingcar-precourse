@@ -10,7 +10,7 @@ public class InputView {
 
     private InputValidator inputValidator = new InputValidator();
 
-    public void requestCarNameList() {
+    public List<String> requestCarNameList() {
         String input = requestInput(OutputView.REQUEST_CAR_NAME_LIST);
         List<String> carNameList = parseCarNameList(input);
 
@@ -18,8 +18,9 @@ public class InputView {
             inputValidator.validateCarNameList(carNameList);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
-            requestCarNameList();
+            return requestCarNameList();
         }
+        return carNameList;
     }
 
     public List<String> parseCarNameList(String input) {
@@ -30,15 +31,16 @@ public class InputView {
         return carNameList;
     }
 
-    public void requestTryNumber() {
+    public int requestTryNumber() {
         String input = requestInput(OutputView.REQUEST_TRY_NUMBER).trim();
 
         try {
             inputValidator.validateTryNumber(input);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
-            requestTryNumber();
+            return requestTryNumber();
         }
+        return Integer.parseInt(input);
     }
 
     private String requestInput(String request) {
