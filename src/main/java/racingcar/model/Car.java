@@ -15,6 +15,14 @@ public class Car {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
     public void move() {
         int randomNumber = Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
         if (randomNumber >= MOVEALBE_LEVEL) {

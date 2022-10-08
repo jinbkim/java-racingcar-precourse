@@ -14,9 +14,6 @@ public class RacingController {
         int tryNumber = inputView.requestTryNumber();
 
         carsModel.setCarList(carNameList);
-        for (int i = 0; i < tryNumber; i++) {
-            carsModel.race();
-        }
-
+        carsModel.race(tryNumber);
     }
 }
