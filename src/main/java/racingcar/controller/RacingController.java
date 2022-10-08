@@ -8,6 +8,6 @@ public class RacingController {
 
     public void run() {
         inputView.requestCarNameList();
-
+        inputView.requestTryNumber();
     }
 }

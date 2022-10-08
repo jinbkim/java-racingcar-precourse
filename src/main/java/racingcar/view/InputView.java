@@ -30,7 +30,18 @@ public class InputView {
         return carNameList;
     }
 
-    public String requestInput(String request) {
+    public void requestTryNumber() {
+        String input = requestInput(OutputView.REQUEST_TRY_NUMBER).trim();
+
+        try {
+            inputValidator.validateTryNumber(input);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            requestTryNumber();
+        }
+    }
+
+    private String requestInput(String request) {
         System.out.print(request);
         return Console.readLine();
     }
