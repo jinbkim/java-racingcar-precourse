@@ -2,6 +2,7 @@ package racingcar.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import racingcar.view.OutputView;
 
 public class CarsModel {
@@ -24,6 +25,37 @@ public class CarsModel {
             printCarListPosition();
         }
     }
+
+    public void printWinner() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append(OutputView.WINNER + " : ");
+        List<Car> winnerList = getWinnerList();
+        for (int i = 0; i < winnerList.size(); i++) {
+            stringBuilder.append(winnerList.get(i)
+                .getName());
+            if (i != winnerList.size() - 1) {
+                stringBuilder.append(", ");
+            }
+        }
+        System.out.println(stringBuilder);
+    }
+
+    private List<Car> getWinnerList() {
+        int winnerPosition = getWinnerPosition();
+        return carList.stream()
+            .filter(c -> c.getPosition() == winnerPosition)
+            .collect(Collectors.toList());
+    }
+
+    private int getWinnerPosition() {
+        int maxPosition = 0;
+        for (Car car : carList) {
+            maxPosition = Math.max(maxPosition, car.getPosition());
+        }
+        return maxPosition;
+    }
+
 
     private void printCarListPosition() {
         StringBuilder stringBuilder = new StringBuilder();

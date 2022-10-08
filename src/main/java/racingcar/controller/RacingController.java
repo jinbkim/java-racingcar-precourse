@@ -15,5 +15,6 @@ public class RacingController {
 
         carsModel.setCarList(carNameList);
         carsModel.race(tryNumber);
+        carsModel.printWinner();
     }
 }
