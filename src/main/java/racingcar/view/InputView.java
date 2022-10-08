@@ -7,15 +7,13 @@ import java.util.stream.Collectors;
 
 public class InputView {
 
-    public List<String> requestCarNameList() {
-        String input = requestInput(OutputView.REQUEST_CAR_NAME_LIST);
-
+    public List<String> parseCarNameList(String input) {
         return Arrays.stream(input.split(","))
             .map(String::trim)
             .collect(Collectors.toList());
     }
 
-    private String requestInput(String request) {
+    public String requestInput(String request) {
         System.out.print(request);
         return Console.readLine();
     }
