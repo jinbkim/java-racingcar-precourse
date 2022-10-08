@@ -23,7 +23,7 @@ public class InputValidatorTest {
     }
 
     @Test()
-    void 자동차_이름_정상적인_입력_검증() {
+    void 자동차_이름_정상적인_입력_받기() {
         assertThatCode(() -> {
             inputValidator.validateCarNameList(carNameList);
         }).doesNotThrowAnyException();
@@ -45,5 +45,22 @@ public class InputValidatorTest {
     void 자동차_이름이_중복된_입력_받기() {
         carNameList.add("나나");
         assertThatThrownBy(() -> inputValidator.validateCarNameList(carNameList));
+    }
+
+    @Test()
+    void 시도_횟수_정상적인_입력_받기() {
+        assertThatCode(() -> inputValidator.validateTryNumber("5")).doesNotThrowAnyException();
+    }
+
+    @Test()
+    void 시도_횟수가_숫자가_아닌_입력_받기() {
+        assertThatThrownBy(() -> inputValidator.validateTryNumber("hello"));
+    }
+
+    @Test()
+    void 시도_횟수가_자연수가_아닌_숫자_입력_받기() {
+        assertThatThrownBy(() -> inputValidator.validateTryNumber("0"));
+        assertThatThrownBy(() -> inputValidator.validateTryNumber("00"));
+        assertThatThrownBy(() -> inputValidator.validateTryNumber("-5"));
     }
 }
