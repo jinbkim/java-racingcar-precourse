@@ -11,5 +11,7 @@ public class RacingController {
     public void run() {
         CarsName carsName = inputView.requestCarsName();
         Cars cars = new Cars(carsName);
+        int tryNumber = inputView.requestTryNum();
+
     }
 }

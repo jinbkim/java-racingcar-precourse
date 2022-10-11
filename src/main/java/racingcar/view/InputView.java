@@ -9,15 +9,20 @@ public class InputView {
         try {
             String input = requestInput(OutputView.REQUEST_CARS_NAME);
             return new CarsName(input);
-        }
-        catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return requestCarsName();
         }
     }
 
+    public int requestTryNum() {
+        String input = requestInput(OutputView.REQUEST_TRY_NUM);
+
+        return Integer.parseInt(input);
+    }
+
     private String requestInput(String input) {
-        System.out.print(input);
+        System.out.println(input);
         return Console.readLine();
     }
 
