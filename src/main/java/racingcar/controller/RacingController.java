@@ -1,5 +1,6 @@
 package racingcar.controller;
 
+import racingcar.model.RacingRound;
 import racingcar.model.car.Cars;
 import racingcar.model.car.CarsName;
 import racingcar.view.InputView;
@@ -11,7 +12,7 @@ public class RacingController {
     public void run() {
         CarsName carsName = inputView.requestCarsName();
         Cars cars = new Cars(carsName);
-        int tryNumber = inputView.requestTryNum();
+        RacingRound racingRound = inputView.requestRacingRound();
 
     }
 }
