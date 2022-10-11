@@ -14,4 +14,12 @@ public class RacingRound {
         racingRound = Integer.parseInt(input);
     }
 
+    public boolean isGameOver() {
+        if (racingRound == 0) {
+            return true;
+        }
+        racingRound -= 1;
+        return false;
+    }
+
 }

@@ -12,4 +12,8 @@ public class Cars {
         carsName.get()
             .forEach(carName -> cars.add(new Car(carName)));
     }
+
+    public void race() {
+        cars.forEach(car -> car.move());
+    }
 }

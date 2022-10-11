@@ -14,5 +14,8 @@ public class RacingController {
         Cars cars = new Cars(carsName);
         RacingRound racingRound = inputView.requestRacingRound();
 
+        while (!racingRound.isGameOver()) {
+            cars.race();
+        }
     }
 }
