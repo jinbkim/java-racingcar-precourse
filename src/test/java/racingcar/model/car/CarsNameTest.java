@@ -16,6 +16,15 @@ class CarsNameTest {
     }
 
     @Test
+    void 자동차_이름의_정상적인_입력_받기() {
+        Assertions.assertThatCode(() -> new CarsName("abc")).doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> new CarsName("abc  ")).doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> new CarsName("  abc")).doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> new CarsName("  abc  ")).doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> new CarsName("  abc  , def   ")).doesNotThrowAnyException();
+    }
+
+    @Test
     void 자동차_이름의_비정상적인_입력_받기() {
         Assertions.assertThatThrownBy(() -> new CarsName(",abc"));
         Assertions.assertThatThrownBy(() -> new CarsName("abc, abcdef"));
