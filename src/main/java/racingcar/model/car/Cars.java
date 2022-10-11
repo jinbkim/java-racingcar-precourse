@@ -14,6 +14,10 @@ public class Cars {
     }
 
     public void race() {
-        cars.forEach(car -> car.move());
+        cars.forEach(car -> {
+            car.move();
+            car.print();
+        });
+        System.out.println();
     }
 }

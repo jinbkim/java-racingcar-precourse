@@ -21,6 +21,16 @@ public class Car {
         }
     }
 
+    public void print() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append(name + " : ");
+        for (int i = 0; i < position; i++) {
+            stringBuilder.append("-");
+        }
+        System.out.println(stringBuilder);
+    }
+
     protected boolean isMovable() {
         if (getRandNum() >= MOVAVLE_LEVEL) {
             return true;
