@@ -5,14 +5,14 @@ import racingcar.model.car.CarsName;
 
 public class InputView {
 
-    public void requestCarsName() {
+    public CarsName requestCarsName() {
         try {
             String input = requestInput(OutputView.REQUEST_CARS_NAME);
-            CarsName carsName = new CarsName(input);
+            return new CarsName(input);
         }
         catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
-            requestCarsName();
+            return requestCarsName();
         }
     }
 

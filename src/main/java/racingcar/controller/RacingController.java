@@ -1,5 +1,7 @@
 package racingcar.controller;
 
+import racingcar.model.car.Cars;
+import racingcar.model.car.CarsName;
 import racingcar.view.InputView;
 
 public class RacingController {
@@ -7,6 +9,7 @@ public class RacingController {
     private final InputView inputView = new InputView();
 
     public void run() {
-        inputView.requestCarsName();
+        CarsName carsName = inputView.requestCarsName();
+        Cars cars = new Cars(carsName);
     }
 }
