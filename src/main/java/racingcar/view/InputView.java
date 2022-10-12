@@ -6,7 +6,6 @@ import racingcar.model.car.CarsName;
 
 public class InputView {
 
-
     public CarsName requestCarsName() {
         String input = requestInput(OutputView.REQUEST_CARS_NAME);
 
