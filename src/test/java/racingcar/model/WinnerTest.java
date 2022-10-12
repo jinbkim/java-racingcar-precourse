@@ -1,14 +1,14 @@
-package racingcar.model.car;
+package racingcar.model;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import racingcar.model.car.Cars;
 
-class CarsTest {
+class WinnerTest {
 
     private static Map<String, Integer> carsMap;
 
@@ -24,10 +24,8 @@ class CarsTest {
     @Test
     void 우승자_계산하기() {
         Cars cars = new Cars(carsMap);
-        List<String> winnersName = cars.findWinnerAll()
-            .stream()
-            .map(car -> car.getName())
-            .collect(Collectors.toList());
+        Winner winner = new Winner(cars.get());
+        List<String> winnersName = winner.get();
 
         Assertions.assertThat(winnersName)
             .contains("다라", "마바", "사아");

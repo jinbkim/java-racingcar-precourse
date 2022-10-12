@@ -1,7 +1,6 @@
 package racingcar.model.car;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 class CarsNameTest {
@@ -17,11 +16,16 @@ class CarsNameTest {
 
     @Test
     void 자동차_이름의_정상적인_입력_받기() {
-        Assertions.assertThatCode(() -> new CarsName("abc")).doesNotThrowAnyException();
-        Assertions.assertThatCode(() -> new CarsName("abc  ")).doesNotThrowAnyException();
-        Assertions.assertThatCode(() -> new CarsName("  abc")).doesNotThrowAnyException();
-        Assertions.assertThatCode(() -> new CarsName("  abc  ")).doesNotThrowAnyException();
-        Assertions.assertThatCode(() -> new CarsName("  abc  , def   ")).doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> new CarsName("abc"))
+            .doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> new CarsName("abc  "))
+            .doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> new CarsName("  abc"))
+            .doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> new CarsName("  abc  "))
+            .doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> new CarsName("  abc  , def   "))
+            .doesNotThrowAnyException();
     }
 
     @Test
