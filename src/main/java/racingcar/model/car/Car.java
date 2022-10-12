@@ -15,8 +15,17 @@ public class Car {
         this.name = name;
     }
 
+    public Car(String name, int position) {
+        this.name = name;
+        this.position = position;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public void move() {
-        if (isMovable()) {
+        if (getRandNum() >= MOVAVLE_LEVEL) {
             position += 1;
         }
     }
@@ -31,11 +40,12 @@ public class Car {
         System.out.println(stringBuilder);
     }
 
-    protected boolean isMovable() {
-        if (getRandNum() >= MOVAVLE_LEVEL) {
-            return true;
-        }
-        return false;
+    public int compareTo(Car car) {
+        return this.position - car.position;
+    }
+
+    public boolean isSamePosition(Car car) {
+        return this.position == car.position;
     }
 
     private int getRandNum() {
